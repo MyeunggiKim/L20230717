@@ -128,7 +128,7 @@ namespace L20230712_1
                         {
                             Console.Write(" " + " ");
                         }
-                        if (playerX == gx && playerY == gy)
+                        if (playerX == 18 && playerY == 17)
                         {
                             Console.WriteLine("Game Clear!");
                             break;
@@ -142,7 +142,7 @@ namespace L20230712_1
                         break;
                     }
                 }
-                if (playerX == gx && playerY == gy)
+                if (playerX == 18 && playerY == 17)
                 //골 도착시 이동키 루프 중단
                 {
                     break;
