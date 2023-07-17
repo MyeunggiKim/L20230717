@@ -130,7 +130,7 @@ namespace L20230712_1
                         }
                         if (playerX == 18 && playerY == 17)
                         {
-                            Console.WriteLine("!!Game Clear!!");
+                            Console.WriteLine("!Game Clear!");
                             break;
                             //루프를 중단 하지 않으면 메시지 반복 출력
                         }
