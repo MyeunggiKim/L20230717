@@ -17,20 +17,20 @@ namespace L20230712_1
                 { 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1},
                 { 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1},
                 { 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1},
-                { 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1},
+                { 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1},
                 { 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1},
                 { 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1},
                 { 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1},
                 { 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1},
-                { 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1},
-                { 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1},
-                { 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1},
-                { 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1},
-                { 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1},
-                { 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1},
-                { 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
-                { 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1},
-                { 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1},
+                { 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1},
+                { 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1},
+                { 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1},
+                { 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1},
+                { 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1},
+                { 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1},
+                { 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
+                { 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1},
+                { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
 
             };
@@ -49,7 +49,7 @@ namespace L20230712_1
             /*Console.WriteLine(randomX);*/
 
             Random numberY = new Random();
-            int randomY = numberY.Next(2, 20);
+            int randomY = numberY.Next(2, 19);
             /*Console.WriteLine(randomY);*/
 
             int gx = randomX1;
@@ -63,18 +63,39 @@ namespace L20230712_1
                 //Process()
                 switch (info.Key)
                 {
-                    case ConsoleKey.LeftArrow:
-                        playerX--;
+                    case ConsoleKey. DownArrow:
+                        playerX++;
                         break;
                     case ConsoleKey.UpArrow:
+                        playerX--;
+                        break;
+                    case ConsoleKey.LeftArrow:
                         playerY--;
                         break;
                     case ConsoleKey.RightArrow:
-                        playerX++;
-                        break;
-                    case ConsoleKey.DownArrow:
                         playerY++;
                         break;
+                }
+                if (map[playerX, playerY] == 1)
+                //플레이어가 맵밖으로 안나가게 하는 코드
+                // map[player1,player2] 좌표에 1이 존제할 경우
+                //입력키의 반대방향으로 이동하게 하여 강제로 맵안에 있도록 유지시킨다
+                {
+                    switch (info.Key)
+                    {
+                        case ConsoleKey.DownArrow:
+                            playerX--;
+                            break;
+                        case ConsoleKey.UpArrow:
+                            playerX++;
+                            break;
+                        case ConsoleKey.LeftArrow: 
+                            playerY++;
+                            break;
+                        case ConsoleKey.RightArrow:
+                            playerY--;
+                            break;
+                    }
                 }
 
                 Console.Clear();
@@ -82,9 +103,10 @@ namespace L20230712_1
 
 
                 //print()
-                for (int y = 0; y < 20; y++)
+                for (int x = 0; x < 20; x++)
                 {
-                    for (int x = 0; x < 20; x++)
+                    
+                    for (int y = 0; y < 20; y++)
                     {
                         if (playerX == x && playerY == y)
                         // &&를 안쓰면 한줄이 전부 P로 바뀌게 된다.
@@ -92,17 +114,19 @@ namespace L20230712_1
                         {
                             Console.Write("P ");
                         }
-                        else if ((y == gy && x == gx))
+                        else if ((y == 17 && x == 18))
                         {
                             Console.Write("G" + " ");
-                        }
-                        else if (map[y, x] == 0)
-                        {
-                            Console.Write(" " + " ");
-                        }
-                        else if (map[y, x] == 1)
+                        } 
+                        //좌표값에 x,y반대로 입력하면 맵이 돌아가는 개판이 일어난다
+                        //주의 할것.
+                        else if (map[x, y] == 1)
                         {
                             Console.Write("*" + " ");
+                        }
+                        else if (map[x, y] == 0)
+                        {
+                            Console.Write(" " + " ");
                         }
                         if (playerX == gx && playerY == gy)
                         {
@@ -112,7 +136,7 @@ namespace L20230712_1
                         }
                     }
                     Console.WriteLine();
-                    if (playerX == gx && playerY == gy)
+                    if (playerX == 18 && playerY == 17)
                     // 골도착시 맵생성 루프 중단
                     {
                         break;
